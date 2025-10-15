@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+</head>
+<body>
+
+    <form class = "conversor-form">
+        <p id = "TituloConversor">Conversor de Moedas</p>
+        <label for = "moeda">Converter de: </label>
+            <select id="moedaDe" onchange="capturarMoedaOrigem ()">
+                <option value="dolar">Dólar</option>
+                <option value="real">Real</option>
+                <option value="euro">Euro</option>
+                <option value="libra">Libra</option>
+                <option value="peso argentino">Peso Argentino</option>
+            </select>
+
+        <label for = "moeda">Converter para: </label>
+            <select id="moedaPara" onchange="capturarMoedaDestino ()">
+                <option value="dolar">Dólar</option>
+                <option value="real">Real</option>
+                <option value="euro">Euro</option>
+                <option value="libra">Libra</option>
+                <option value="peso argentino">Peso Argentino</option>
+            </select>
+            
+        <input type = "number" id = "valor" placeholder = "Digite o valor a ser convertido">
+
+        <button type = "button" id = "botaoConverter"onclick="converter()">Converter</button>
+
+        <div id = "resultado" class = "caixa-resultado"></div>
+
+    </form>
+    
+</body>
+    <script src="conversor-moedas.js"></script>
+</html>
